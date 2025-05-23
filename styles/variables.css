@@ -1,1 +1,69 @@
 /* В этом файле будут храниться все значения переменных в исходном состоянии, а так же их изменения в зависимости от ширины устройства */
+    :root {
+        --font-family: 'Inter', sans-serif;
+        --second-family: 'PressStart2P', sans-serif;
+        --text-color:#000;
+        --font-weight-bold: 700;
+        --font-weight-regular:400;
+        --font-variation-weight:'wght' 400;
+        --font-variation-weight-bold:'wght' 700;
+        --border:#000 solid 2px;
+        --border-icon-button:2px transparent solid;
+        --padding-icon-button:0px;
+        --header__title-font-size:clamp(3.0625rem, 2.7104rem + 1.5023vw, 4.0625rem);
+        --header__text-font-size:clamp(0.875rem, 0.6769rem + 0.8451vw, 1.4375rem);
+        --card__title-font-size:clamp(1.125rem, 1.125rem + 0vw, 1.125rem); 
+        --card__text-font-size:clamp(1.125rem, 1.125rem + 0vw, 1.125rem);
+        --button-text-font-size:clamp(0.875rem, 0.875rem + 0vw, 0.875rem);
+        --card__label-font-size:clamp(0.875rem, 0.875rem + 0vw, 0.875rem);
+        --inline-size-section:clamp(375px, 100%, 700px);
+        --inline-size-dialog:clamp(341px, 100%, 353px);
+        --margin-block-header: 100px;
+        --margin-block-end-card:50px;
+        --margin-block-end-footer:100px;
+        --text-stroke-label:1px rgb(255, 255, 255, 0.5);
+        --background-color-header: #fff;
+        --background-color-card:#fff;
+        --card-title-padding:5px 10px;
+        --header-padding:clamp(120px, 8.88%, 128px) clamp(14px, 8.37%, 120.5px);
+        --footer__button-padding:15px 19px;
+        --card__decription-padding:25px;
+        --background-color-button:#fff;
+        --background-card--icon-button:#fff;
+        --dialog-padding:30px;
+        --dialog-text-font-size:clamp(0.875rem, 0.875rem + 0vw, 0.875rem);
+        --dialog-button-padding:9px 17px;
+        --dialog-backdrop-color:rgb(0 0 0 / 0.75);
+        --background-image: repeating-linear-gradient(
+            to right,
+            #d3d3d3,
+            #d3d3d3 2px,
+            transparent 2px,
+            transparent 4px
+          ),
+          repeating-linear-gradient(
+            to bottom,
+            #d3d3d3,
+            #d3d3d3 2px,
+            transparent 2px,
+            transparent 4px
+          ),
+          linear-gradient(
+            to bottom,
+            #e7e7e7 0.01%,
+            #1a1a1a 
+          );
+          --box-shadow:2px 2px 0 #000;
+          --animation-fill-color:#FF0000;
+          --contour-color:#000;
+          --core-color:#fff;
+          --main-body-color:#FF0000;
+        
+      }
+      @media (width <= 375px) {
+        :root {
+        --card-title-padding: 4px 10px 6px;
+        --footer__button-padding:15px 19px;
+        --dialog-padding:30px 40px;
+      }
+    }
