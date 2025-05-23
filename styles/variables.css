@@ -5,8 +5,8 @@
   --text-color: #000;
   --font-weight-bold: 700;
   --font-weight-regular: 400;
-  --font-variation-weight: "wght" 400;
-  --font-variation-weight-bold: "wght" 700;
+  --wght:400;
+  --wght-bold:700;
   --border: #000 solid 2px;
   --border-icon-button: 2px transparent solid;
   --padding-icon-button: 0px;
