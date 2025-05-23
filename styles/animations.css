@@ -38,14 +38,13 @@
     fill: var(--animation-fill-color);
     transition-delay: 0.03s;
   }
-  
+
   .like-icon.is-liked .contour {
     fill: var(--animation-fill-color);
     transition-delay: 0.06s;
   }
 
- .like-icon:not(.is-liked) .contour {
-
+  .like-icon:not(.is-liked) .contour {
     fill: var(--contour-color); 
     transition: fill 0.1s linear;
   }
