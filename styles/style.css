@@ -132,6 +132,7 @@
 }
 .card__text {
   line-height:117%;
+  font-variation-settings: var(--font-variation-weight);
   font-size: var(--card__text-font-size);
 }
 
@@ -210,7 +211,6 @@
 .dialog-text {
   grid-row: 1;
   grid-column: 2;
-  line-height: var(--dialog-text-line-height);
   text-transform: uppercase;
   font-family: var(--second-family);
   font-size: var(--dialog-text-font-size);

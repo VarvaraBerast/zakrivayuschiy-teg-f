@@ -28,9 +28,7 @@
       opacity: 0;
     }
   }
-  @media (width <= 375px) {
-  
-  }
+ 
   .like-icon.is-liked .core {
     fill: var(--animation-fill-color);
     transition-delay: 0s;
@@ -45,10 +43,12 @@
     fill: var(--animation-fill-color);
     transition-delay: 0.06s;
   }
+  
   .like-icon:not(.is-liked) .contour {
     fill: var(--contour-color); 
     transition: fill 0.1s linear;
   }
+
   .heart {
     transform: scale(1);
   }
