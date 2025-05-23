@@ -4,3 +4,4 @@
 
 **Ссылка на проект:** 
 https://varvaraberast.github.io/zakrivayuschiy-teg-f
+https://github.com/VarvaraBerast/zakrivayuschiy-teg-f.git
