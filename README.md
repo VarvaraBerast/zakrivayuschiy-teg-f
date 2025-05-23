@@ -3,5 +3,4 @@
 В этом проекте главный фокус был на работе с анимацией, svg и градиентом. Также, была задача сделать максимально резиновую верску. Добавлено диалоговое окно.
 
 **Ссылка на проект:** 
-
-https://varvaraberast.github.io/zakrivayuschiy-teg-f/
+https://varvaraberast.github.io/zakrivayuschiy-teg-f
