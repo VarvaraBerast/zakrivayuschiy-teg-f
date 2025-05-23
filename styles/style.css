@@ -59,6 +59,7 @@
   font-size: var(--card__title-font-size);
   border-block-end: var(--border);
 }
+
 .card {
   inline-size: var(--inline-size-section);
   margin-block-end: var(--margin-block-end-card);
