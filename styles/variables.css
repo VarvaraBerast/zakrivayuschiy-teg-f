@@ -5,31 +5,32 @@
   --text-color: #000;
   --font-weight-bold: 700;
   --font-weight-regular: 400;
-  --wght:400;
-  --wght-bold:700;
+  --wght: 400;
+  --wght-bold: 700;
   --border: #000 solid 2px;
-  --border-icon-button: 2px transparent solid;
-  --padding-icon-button: 0px;
-  --header__title-font-size: clamp(3.0625rem, 2.7104rem + 1.5023vw, 4.0625rem);
-  --header__text-font-size: clamp(0.875rem, 0.6769rem + 0.8451vw, 1.4375rem);
-  --card__title-font-size: clamp(1.125rem, 1.125rem + 0vw, 1.125rem);
-  --card__text-font-size: clamp(1.125rem, 1.125rem + 0vw, 1.125rem);
+  --border-color: #000;
+  --card-icon-button-border: 2px transparent solid;
+  --card-icon-button-padding: 0px;
+  --header-title-font-size: clamp(3.0625rem, 2.7104rem + 1.5023vw, 4.0625rem);
+  --header-text-font-size: clamp(0.875rem, 0.6769rem + 0.8451vw, 1.4375rem);
+  --card-title-font-size: clamp(1.125rem, 1.125rem + 0vw, 1.125rem);
+  --card-text-font-size: clamp(1.125rem, 1.125rem + 0vw, 1.125rem);
   --button-text-font-size: clamp(0.875rem, 0.875rem + 0vw, 0.875rem);
-  --card__label-font-size: clamp(0.875rem, 0.875rem + 0vw, 0.875rem);
-  --inline-size-section: clamp(375px, 100%, 700px);
-  --inline-size-dialog: clamp(341px, 100%, 353px);
-  --margin-block-header: 100px;
-  --margin-block-end-card: 50px;
-  --margin-block-end-footer: 100px;
-  --text-stroke-label: 1px rgb(255, 255, 255, 0.5);
-  --background-color-header: #fff;
-  --background-color-card: #fff;
+  --card-label-font-size: clamp(0.875rem, 0.875rem + 0vw, 0.875rem);
+  --section-inline-size: clamp(375px, 100%, 700px);
+  --dialog-inline-size: clamp(341px, 100%, 353px);
+  --header-margin-block: 100px;
+  --card-margin-block-end: 50px;
+  --save-panel-margin-block-end: 100px;
+  --label-text-stroke: 1px rgb(255, 255, 255, 0.5);
+  --header-background-color: #fff;
+  --card-background-color: #fff;
   --card-title-padding: 5px 10px;
   --header-padding: clamp(120px, 8.88%, 128px) clamp(14px, 8.37%, 120.5px);
-  --footer__button-padding: 15px 19px;
-  --card__decription-padding: 25px;
-  --background-color-button: #fff;
-  --background-card--icon-button: #fff;
+  --save-panel-button-padding: 15px 19px;
+  --card-decription-padding: 25px;
+  --button-background-color: #fff;
+  --card-icon-button-background: #fff;
   --dialog-padding: 30px;
   --dialog-text-font-size: clamp(0.875rem, 0.875rem + 0vw, 0.875rem);
   --dialog-button-padding: 9px 17px;
@@ -58,7 +59,7 @@
 @media (width <= 375px) {
   :root {
     --card-title-padding: 4px 10px 6px;
-    --footer__button-padding: 15px 19px;
+    --save-panel-button-padding: 15px 19px;
     --dialog-padding: 30px 40px;
   }
 }

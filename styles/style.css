@@ -13,8 +13,9 @@
 .page {
   min-inline-size: 320px;
   min-block-size: 100dvb;
-  font-family: var(--font-family);
-  font-variation-settings: 'wght' var(--wght);
+  font-family: var(--font-family, "Inter", sans-serif);
+  font-family: "Inter", sans-serif;
+  font-variation-settings: "wght" var(--wght);
   background-size: cover;
   background-attachment: fixed;
   background-repeat: no-repeat;
@@ -24,76 +25,82 @@
 }
 @supports (font-variation-settings: normal) {
   body {
-      font-family: var(--font-family);
+    font-family: var(--font-family);
   }
-} 
+}
+
 .header {
-  background-color: var(--background-color-header);
-  inline-size: var(--inline-size-section);
+  background-color: var(--header-background-color);
+  inline-size: var(--section-inline-size);
   padding: var(--header-padding);
   border: var(--border);
-  margin-block-end: var(--margin-block-header);
-  margin-block-start: var(--margin-block-header);
+  margin-block-end: var(--header-margin-block);
+  margin-block-start: var(--header-margin-block);
   justify-self: center;
-}
-.header__section {
   text-transform: uppercase;
   font-family: var(--second-family);
   display: flex;
-  justify-self: center;
   flex-direction: column;
   align-items: center;
   gap: 20px;
   font-weight: var(--font-weight-regular);
 }
+
 .header__title {
-  font-size: var(--header__title-font-size);
+  font-size: var(--header-title-font-size);
 }
+
 .header__text {
-  font-size: var(--header__text-font-size);
-}
-.card__title {
-  font-family: var(--font-family);
-  font-variation-settings: 'wght' var(--wght-bold);
-  padding: var(--card-title-padding);
-  font-size: var(--card__title-font-size);
-  border-block-end: var(--border);
+  font-size: var(--header-text-font-size);
 }
 
 .card {
-  inline-size: var(--inline-size-section);
-  margin-block-end: var(--margin-block-end-card);
+  inline-size: var(--section-inline-size);
+  margin-block-end: var(--card-margin-block-end);
   justify-self: center;
 }
+
+.card__title {
+  font-family: var(--font-family);
+  font-variation-settings: "wght" var(--wght-bold);
+  padding: var(--card-title-padding);
+  font-size: var(--card-title-font-size);
+  border-block-end: var(--border);
+}
+
 .card__wrapper {
   position: relative;
-  border: var(--border);
 }
+
 .card__item {
-  background-color: var(--background-color-card);
+  background-color: var(--card-background-color);
   border: var(--border);
 }
+
 .card__list {
   display: flex;
   flex-wrap: wrap;
   gap: 50px;
 }
+
 .card__label {
   position: absolute;
   font-family: var(--second-family);
-  font-size: var(--card__label-font-size);
+  font-size: var(--card-label-font-size);
   right: 25px;
   top: 27px;
   mix-blend-mode: hard-light;
-  -webkit-text-stroke: var(--text-stroke-label);
+  -webkit-text-stroke: var(--label-text-stroke);
   z-index: 1;
   font-weight: var(--font-weight-regular);
 }
-@supports (text-stroke: var(--text-stroke-label)) {
+
+@supports (text-stroke: var(--label-text-stroke)) {
   .card__label {
-    text-stroke: var(--text-stroke-label);
+    text-stroke: var(--label-text-stroke);
   }
 }
+
 .card__img {
   width: 100%;
   object-fit: cover;
@@ -101,21 +108,27 @@
   aspect-ratio: 1 / 1;
   display: block;
 }
+
 .filter-contrast {
   filter: contrast(160%);
 }
+
 .filter-blur {
   filter: blur(2px);
 }
+
 .filter-saturate {
   filter: saturate(158%);
 }
+
 .filter-sepia {
   filter: sepia(100%);
 }
+
 .filter-multiple {
   filter: brightness(1.2) contrast(150%) saturate(180%) hue-rotate(45deg);
 }
+
 .filter-hue-rotate {
   filter: hue-rotate(120deg);
 }
@@ -127,91 +140,93 @@
 .card__decription {
   display: flex;
   flex-direction: column;
-  padding: var(--card__decription-padding);
+  padding: var(--card-decription-padding);
   gap: 25px;
   border-block-start: var(--border);
 }
+
 .card__text-wrapper {
   display: flex;
   gap: 27px;
   flex-wrap: wrap;
 }
+
 .card__text {
-  line-height:117%;
-  font-variation-settings: 'wght' var(--wght);
-  font-size: var(--card__text-font-size);
+  line-height: 117%;
+  font-variation-settings: "wght" var(--wght);
+  font-size: var(--card-text-font-size);
 }
 
-.button-styles {
+.button {
   border: var(--border);
-  background-color: var(--background-color-button);
+  background-color: var(--button-background-color);
   font-size: var(--button-text-font-size);
   font-family: var(--second-family);
-  line-height:90%;
+  line-height: 90%;
+  color: var(--text-color);
+  cursor: pointer;
+  transition: box-shadow 0.3s ease;
 }
+
 .card__button-wrapper {
   display: flex;
   align-self: end;
   gap: 4px;
 }
+
 .card__icon-button {
-  background-color: var(--background-card--icon-button);
-  height: 38px;
-  padding: var( --padding-icon-button);
-  border: var(--border-icon-button);
+  background-color: var(--card-icon-button-background);
+  height: 2.375rem;
+  padding: var(--card-icon-button-padding);
+  border: var(--card-icon-button-border);
   display: flex;
   justify-content: center;
   align-items: center;
-}
-
-.card__icon-button svg {
-  display: inline-block;
-  vertical-align: middle;
-  width: 39px;
-  height: 36px;
+  transition: border-color 0.3s ease; 
 }
 
 .card__like-button {
-  width: 130px;
-  height: 38px;
-  cursor: pointer;
+  width: 8.125rem;
+  height: 2.375rem;
   position: relative;
   z-index: 1;
   overflow: hidden;
 }
 
-.footer {
+.save-panel {
   display: flex;
-  inline-size: var(--inline-size-section);
-  margin-block-end:var(--margin-block-end-footer);
+  inline-size: var(--section-inline-size);
+  margin-block-end: var(--save-panel-margin-block-end);
   justify-content: center;
   justify-self: center;
 }
 
-.footer__button {
-  padding: var(--footer__button-padding);
-  cursor: pointer;
+.save-panel__button {
+  padding: var(--save-panel-button-padding);
   display: flex;
   align-items: center;
   gap: 7px;
   position: relative;
   overflow: hidden;
 }
-
-.dialog[open] {
-  display: grid;
+.dialog {
   row-gap: 30px;
   column-gap: 20px;
-  inline-size: var(--inline-size-dialog);
+  inline-size: var(--dialog-inline-size);
   padding: var(--dialog-padding);
   border: var(--border);
 }
+
+.dialog[open] {
+  display: grid;
+}
+
 .dialog svg {
   align-self: center;
 }
+
 .dialog::backdrop {
   background-color: var(--dialog-backdrop-color);
-  backdrop-filter: blur(7px);
 }
 
 .dialog-text {
@@ -220,30 +235,31 @@
   text-transform: uppercase;
   font-family: var(--second-family);
   font-size: var(--dialog-text-font-size);
-  line-height:150%;
+  line-height: 150%;
 }
+
 .dialog-button {
   grid-row: 2;
   grid-column: span 2;
   padding: var(--dialog-button-padding);
   position: relative;
-  height: 38px;
-}
-.card__like-button:focus,
-.footer__button:focus,
-.dialog-button:focus {
-  outline: none;
-  box-shadow: var(--box-shadow);
-  transition: box-shadow 0.3s ease;
+  height: 2.375rem;
+  text-transform: uppercase;
 }
 
-.footer__button:before,
-.card__like-button:before,
-.dialog-button:before {
+.button:focus {
+  outline: none;
+}
+
+.button:focus-visible {
+  box-shadow: var(--box-shadow);
+}
+
+.button:before {
   content: "";
   position: absolute;
   inset: 0;
-  background-color: var(--background-color-button);
+  background-color: var(--button-background-color);
   transform: scaleX(0);
   transform-origin: left;
   transition: transform 0.5s ease-in-out;
@@ -251,59 +267,19 @@
   mix-blend-mode: difference;
 }
 
-.footer__button:hover:before,
-.card__like-button:hover:before,
-.dialog-button:hover:before {
+.button:hover:before {
   transform: scaleX(1);
 }
 .card__icon-button:focus {
   outline: none;
 }
 .card__icon-button:focus-visible {
-  border: var(--border);
-  transition: border 0.3s ease;
-}
-
-.like-icon:hover .core,
-.like-icon:hover .main-body {
-  transition: fill 0.3s ease;
-  fill: var(--contour-color);
-}
-
-.like-icon:hover .main-body {
-  transition-delay: 0.05s;
-}
-.like-icon:not(:hover) .core {
-  transition: fill 0.3s ease;
-  transition-delay: 0.03s;
-  fill: transparent;
-}
-.like-icon:not(:hover) .main-body {
-  transition: fill 0.3s ease;
-  fill: transparent;
-}
-
-.like-icon:active .core,
-.like-icon:active .main-body {
-  transition: fill 0.3s ease;
-  fill: var(--animation-fill-color);
-}
-
-.like-icon:active .main-body {
-  transition-delay: 0.05s;
-}
-.like-icon:not(:active) .core {
-  transition: fill 0.3s ease;
-  transition-delay: 0.03s;
-}
-.like-icon:not(:active) .main-body {
-  transition: fill 0.3s ease;
+  border-color: var(--border-color);
 }
 
 @media (width <= 375px) {
- 
   .footer__button {
-    height: 84px;
+    height: 5.25rem;
     flex-direction: column;
     gap: 8px;
   }
