@@ -278,12 +278,12 @@
 }
 
 @media (width <= 375px) {
-  .footer__button {
+  .save-panel__button {
     height: 5.25rem;
     flex-direction: column;
     gap: 8px;
   }
-  .footer__button svg {
+  .save-panel__button svg {
     width: 28px;
     height: 28px;
   }
