@@ -14,7 +14,6 @@
   min-inline-size: 320px;
   min-block-size: 100dvb;
   font-family: var(--font-family, "Inter", sans-serif);
-  font-family: "Inter", sans-serif;
   font-variation-settings: "wght" var(--wght);
   background-size: cover;
   background-attachment: fixed;
